@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST={"semenskiKompir.js -> ../src/components/Counter":{"id":"semenskiKompir.js -> ../src/components/Counter","files":["static/chunks/src_components_Counter_js.js"]}}
