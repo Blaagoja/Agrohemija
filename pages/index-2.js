@@ -8,7 +8,11 @@ import {
   recentProductSlider,
   testimonialSliderTwo,
 } from "../src/sliderProps";
+import { useTranslation } from 'react-i18next';
+
 const Index2 = () => {
+
+  const { t } = useTranslation(); 
   return (
     <Layout header={2}>
       <section className="hero-area-two">
@@ -74,7 +78,7 @@ const Index2 = () => {
                         data-animation="fadeInDown"
                         data-delay=".4s"
                       >
-                        Секогаш во чекор со времето.
+                           {t('sekogashVoCekor')}
                       </span>
                       <h1 data-animation="fadeInUp" data-delay=".5s">
                         Agriculture &amp; Organic Farms

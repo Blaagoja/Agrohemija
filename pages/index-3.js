@@ -9,11 +9,14 @@ import {
   projectsSliderTwo,
   serviceSliderOne,
 } from "../src/sliderProps";
-
+import { useTranslation } from 'react-i18next';
 const Counter = dynamic(() => import("../src/components/Counter"), {
   ssr: false,
 });
 const Index3 = () => {
+
+  const { t } = useTranslation(); 
+
   return (
     <Layout header={3} footer={3}>
       <section className="hero-area-three">
@@ -39,7 +42,7 @@ const Index3 = () => {
                       data-animation="fadeInDown"
                       data-delay=".4s"
                     >
-                      Секогаш во чекор со времето.
+                        {t('sekogashVoCekor')}
                     </span>
                     <h1 data-animation="fadeInUp" data-delay=".5s">
                       Agriculture Farming

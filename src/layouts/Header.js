@@ -4,6 +4,7 @@ import useWindowSize from "../useWindowSize";
 import { stickyNav } from "../utils";
 import MobileHeader from "./MobileHeader";
 import OffcanvasPanel from "./OffcanvasPanel";
+import { useTranslation } from 'react-i18next';
 
 const Header = ({ header }) => {
   useEffect(() => {
@@ -13,7 +14,8 @@ const Header = ({ header }) => {
   const togglePanel = () => setOverlayPanel(!overlayPanel);
 
   const { width } = useWindowSize();
-
+  const { t } = useTranslation();
+  
   useEffect(() => {
     const headers = document.querySelectorAll(".header-navigation");
     headers.forEach((header) => {
@@ -39,9 +41,15 @@ const Header = ({ header }) => {
 
   switch (header) {
     case 1:
-      return <Header1 />;
+      return <>
+       <h1>{t('labelTest')}</h1>
+        <Header1 />
+      </>;
     case 2:
-      return <Header2 />;
+      return     <>
+      <h1>{t('labelTest')}</h1>
+       <Header2 />
+     </>;;
     case 3:
       return (
         <Header3
@@ -63,7 +71,7 @@ const Header = ({ header }) => {
 export default Header;
 
 const Header1 = () => (
-  <header className="header-area">
+  <header className="header-area"> 
     <div className="header-top-bar top-bar-one bg-blue">
       <div className="container-fluid">
         <div className="row align-items-center">

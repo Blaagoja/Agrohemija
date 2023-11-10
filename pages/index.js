@@ -10,7 +10,14 @@ import {
   logoSlider,
   testimonialSliderOne,
 } from "../src/sliderProps";
+import '../public/locales/mk/common.js';
+import '../public/locales/en/common.js';
+import '../public/locales/index.js'; 
+
+import { useTranslation } from 'react-i18next';
 const Index = () => {
+
+  const { t } = useTranslation(); 
   return (
     <Layout header={1}>
       <section className="hero-area-one">
@@ -32,10 +39,10 @@ const Index = () => {
                       data-animation="fadeInDown"
                       data-delay=".4s"
                     >
-                     Секогаш во чекор со времето.
+                      {t('sekogashVoCekor')}
                     </span> */}
                     <h1 data-animation="fadeInUp" data-delay=".5s">
-                    Секогаш во чекор со времето
+                    {t('sekogashVoCekor')}
                     </h1>
                     <div
                       className="hero-button"
@@ -76,7 +83,7 @@ const Index = () => {
                       Organic Farms
                     </span> */}
                     <h1 data-animation="fadeInUp" data-delay=".5s">
-                    Секогаш во чекор со времето
+                    {t('sekogashVoCekor')}
                     </h1>
                     <div
                       className="hero-button"
@@ -117,7 +124,7 @@ const Index = () => {
                       Organic Farms
                     </span> */}
                     <h1 data-animation="fadeInUp" data-delay=".5s">
-                    Секогаш во чекор со времетo
+                    {t('sekogashVoCekor')}
                     </h1>
                     <div
                       className="hero-button"
@@ -158,7 +165,7 @@ const Index = () => {
                       Organic Farms
                     </span> */}
                     <h1 data-animation="fadeInUp" data-delay=".5s">
-                    Секогаш во чекор со времето
+                    {t('sekogashVoCekor')}
                     </h1>
                     <div
                       className="hero-button"
