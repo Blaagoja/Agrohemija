@@ -50,7 +50,7 @@ const Index = () => {
                       data-delay=".6s"
                     >
                       <Link href="/about">
-                        <a className="main-btn btn-yellow">{t('AboutUs')}</a>
+                        <a className="main-btn btn-yellow">{t('About Us')}</a>
                       </Link>
                       {/* <Link href="/portfolio-grid">
                         <a className="main-btn bordered-btn bordered-white">
@@ -91,7 +91,7 @@ const Index = () => {
                       data-delay=".6s"
                     >
                       <Link href="/about">
-                        <a className="main-btn btn-yellow">{t('AboutUs')}</a>
+                        <a className="main-btn btn-yellow">{t('About Us')}</a>
                       {/* </Link>
                       <Link href="/portfolio-grid">
                         <a className="main-btn bordered-btn bordered-white">
@@ -132,7 +132,7 @@ const Index = () => {
                       data-delay=".6s"
                     >
                       <Link href="/about">
-                        <a className="main-btn btn-yellow">{t('AboutUs')}</a>
+                        <a className="main-btn btn-yellow">{t('About Us')}</a>
                       </Link>
                       {/* <Link href="/portfolio-grid">
                         <a className="main-btn bordered-btn bordered-white">
@@ -173,7 +173,7 @@ const Index = () => {
                       data-delay=".6s"
                     >
                       <Link href="/about">
-                        <a className="main-btn btn-yellow">{t('AboutUs')}</a>
+                        <a className="main-btn btn-yellow">{t('About Us')}</a>
                       </Link>
                       {/* <Link href="/portfolio-grid">
                         <a className="main-btn bordered-btn bordered-white">
@@ -201,10 +201,7 @@ const Index = () => {
                     <i className="flaticon-tractor" />
                   </div>
                   <div className="text">
-                    <h5>Премиум квалитет на производит</h5>
-                    <p>
-                      Sit amet consectetur adipiscing elit sed eiusmod tempor
-                    </p>
+                    <h5>{t('quality')}</h5>
                   </div>
                 </div>
               </div>
@@ -215,10 +212,7 @@ const Index = () => {
                     <i className="flaticon-agriculture" />
                   </div>
                   <div className="text">
-                    <h5>Достава низ цела Македонија</h5>
-                    <p>
-                      Sit amet consectetur adipiscing elit sed eiusmod tempor
-                    </p>
+                    <h5>{t('delivery')}</h5>
                   </div>
                 </div>
               </div>
@@ -229,10 +223,7 @@ const Index = () => {
                     <i className="flaticon-social-care" />
                   </div>
                   <div className="text">
-                    <h5>Најдобри цени на пазарот</h5>
-                    <p>
-                      Sit amet consectetur adipiscing elit sed eiusmod tempor
-                    </p>
+                    <h5>{t('best')}</h5>
                   </div>
                 </div>
               </div>
@@ -249,14 +240,14 @@ const Index = () => {
               <div className="about-one_content-box mb-50">
                 <div className="section-title section-title-left mb-30 wow fadeInUp">
                   {/* <span className="sub-title">About Us</span> */}
-                  <h2>ДОБРЕДОЈДОВТЕ АГРОХЕМИЈА</h2>
+                  <h2>{t('welcome')}</h2>
                 </div>
                 <div
                   className="quote-text mb-35 wow fadeInDown"
                   data-wow-delay=".3s"
                 >
                   <p>
-                  “Комбинација од над 50 години напорна работа и споделување на семејни знаења”
+                  {t('50yrs')}
                   </p>
                 </div>
                 <Tab.Container defaultActiveKey={"mission"}>
@@ -270,7 +261,7 @@ const Index = () => {
                           eventKey="mission"
                           href="#mission"
                         >
-                          НАША МИСИЈА
+                          {t('mission')}
                         </Nav.Link>
                       </li>
                       <li className="nav-item">
@@ -281,7 +272,7 @@ const Index = () => {
                           eventKey="vision"
                           href="#vision"
                         >
-                          НАША ВИЗИЈА
+                          {t('vision')}
                         </Nav.Link>
                       </li>
                     </Nav>
@@ -289,7 +280,7 @@ const Index = () => {
                       <Tab.Pane className="tab-pane fade" eventKey="mission">
                         <div className="content-box-gap">
                           <p>
-                          Обезбедување на испорака на производи со висок квалитет на нашите клиенти и задоволување на нивните потреби.
+                          {t('mission1')}
                           </p>
                           <div className="avatar-box d-flex align-items-center">
                             <div className="thumb">
@@ -307,7 +298,7 @@ const Index = () => {
                       <Tab.Pane className="tab-pane fade" eventKey="vision">
                         <div className="content-box-gap">
                           <p>
-                          Одржливо работење, зголемување на продуктивноста и зајакнување на долгорочните партнерства.
+                          {t('vision1')}
                           </p>
                           <div className="avatar-box d-flex align-items-center">
                             <div className="thumb">
@@ -371,7 +362,7 @@ const Index = () => {
                 <div className="text">
                   <h3 className="title">
                     <Link href="/service-details">
-                      <a>СЕМИЊА</a>
+                      <a>{t('seeds')}</a>
                     </Link>
                   </h3>
                 </div>
@@ -385,7 +376,7 @@ const Index = () => {
                 <div className="text">
                   <h3 className="title">
                     <Link href="/service-details">
-                      <a>ПЕСТИЦИДИ</a>
+                      <a>{t('pesticides')}</a>
                     </Link>
                   </h3>
                 </div>
@@ -399,7 +390,7 @@ const Index = () => {
                 <div className="text">
                   <h3 className="title">
                     <Link href="/service-details">
-                      <a>ЃУБРИВО</a>
+                      <a>{t('Fertilizer')}</a>
                     </Link>
                   </h3>
                 </div>
@@ -413,7 +404,7 @@ const Index = () => {
                 <div className="text">
                   <h3 className="title">
                     <Link href="/service-details">
-                      <a>РЕПРО</a>
+                      <a>{t('repro')}</a>
                     </Link>
                   </h3>
                 </div>
@@ -427,7 +418,7 @@ const Index = () => {
                 <div className="text">
                   <h3 className="title">
                     <Link href="/service-details">
-                      <a>ПРОГРАМИ ЗА ЗАШТИТА</a>
+                      <a>{t('PPG')}</a>
                     </Link>
                   </h3>
                 </div>

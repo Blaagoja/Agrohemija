@@ -5,12 +5,20 @@ import { stickyNav } from "../utils";
 import MobileHeader from "./MobileHeader";
 import OffcanvasPanel from "./OffcanvasPanel";
 import { useTranslation } from 'react-i18next';
+import '../../public/locales/en/common.js';
+import '../../public/locales/mk/common.js';
+import '../../public/locales/index.js';
+import { t } from "i18next";
+
+
 
 
 
 
 
 function Header({ header }) {
+
+  const { t } = useTranslation();
   useEffect(() => {
     stickyNav();
   }, []);
@@ -18,7 +26,7 @@ function Header({ header }) {
   const togglePanel = () => setOverlayPanel(!overlayPanel);
 
   const { width } = useWindowSize();
-  const { t } = useTranslation();
+ 
 
   useEffect(() => {
     const headers = document.querySelectorAll(".header-navigation");
@@ -76,20 +84,18 @@ const Header1 = () => (
         <div className="row align-items-center">
           <div className="col-xl-6 col-lg-12 col-md-12 col-6">
             <div className="top-bar-left d-flex align-items-center">
-              <span className="text">
-                Welcome to Agrohemija
-              </span>
+      
             </div>
           </div>
           <div className="col-xl-6 col-lg-12 col-md-12 col-6">
             <div className="top-bar-right">
               <span className="text">
                 <i className="far fa-clock" />
-                работно време : понеделник - петок, 08:00 am - 05:00pm
+                {t('workingTime')}
               </span>
               <ul className="social-link">
                 <li>
-                  <a href="#">
+                  <a href="https://www.facebook.com/agrohemijamk" target="blank">
                     <i className="fab fa-facebook-f" />
                   </a>
                 </li>
@@ -133,8 +139,8 @@ const Header1 = () => (
                   <i className="flaticon-placeholder" />
                 </div>
                 <div className="info">
-                  <h5 className="mb-1">Locations</h5>
-                  <p>Hristo Tatarcev 1 br.103
+                  <h5 className="mb-1 text-white">{t('location')}</h5>
+                  <p className="text-white">Hristo Tatarcev 1 br.103
                     1000 Skopje, Macedonia</p>
                 </div>
               </div>
@@ -143,17 +149,17 @@ const Header1 = () => (
                   <i className="flaticon-email" />
                 </div>
                 <div className="info">
-                  <h5 className="mb-1">Email Us</h5>
-                  <p>
-                    <a href="mailto:hotlineinfo@gmial.com">
-                    http://www.agrohemija.com.mk/
+                  <h5 className="mb-1 text-white">{t('email')}</h5>
+                  <p className="text-white">
+                    <a href="mailto:brankobaltovski@gmail.com">
+                    brankobaltovski@gmail.com
                     </a>
                   </p>
                 </div>
               </div>
               <div className="button text-md-right text-sm-center">
                 <Link href="/contact">
-                  <a className="main-btn btn-yellow">КОНТАКТ </a>
+                  <a className="main-btn btn-yellow text-white">{t('contact')}</a>
                 </Link>
               </div>
             </div>
@@ -210,12 +216,6 @@ const Header2 = () => (
             <div className="top-bar-left d-flex align-items-center">
               <span className="text">
                 Welcome to Agrohemija
-              </span>
-              <span className="lang-dropdown">
-                <select className="wide">
-                  <option value={1}>English</option>
-                  <option value={2}>French</option>
-                </select>
               </span>
             </div>
           </div>
@@ -411,12 +411,6 @@ const Header4 = ({ overlayPanel, togglePanel }) => (
           <div className="row align-items-center">
             <div className="col-xl-6 col-lg-12 col-md-12 col-6">
               <div className="top-bar-left d-flex align-items-center">
-                <span className="lang-dropdown">
-                  <select className="wide">
-                    <option value={1}>English</option>
-                    <option value={2}>French</option>
-                  </select>
-                </span>
               </div>
             </div>
             <div className="col-xl-6 col-lg-12 col-md-12 col-6">
@@ -542,12 +536,6 @@ const DefaultHeader = () => (
               <span className="text">
                 Welcome to Agrohemija
               </span>
-              <span className="lang-dropdown">
-                <select className="wide">
-                  <option value={1}>English</option>
-                  <option value={2}>French</option>
-                </select>
-              </span>
             </div>
           </div>
           <div className="col-xl-6 col-lg-12 col-md-12 col-6">
@@ -626,7 +614,7 @@ const DefaultHeader = () => (
               {/*=== Navbar Menu Button ===*/}
               <div className="menu-button">
                 <Link href="/contact">
-                  <a className="main-btn btn-yellow">КОНТАКТ</a>
+                  <a className="main-btn btn-yellow">Контакт</a>
                 </Link>
               </div>
             </div>
@@ -670,114 +658,117 @@ const Menu = () => (
         </a>
       </li> */}
       <li className="menu-item has-children">
-        <a href="portfolio-grid">СЕМИЊА</a>
+        <a href="portfolio-grid">{t('seeds')}</a>
         <ul className="sub-menu">
           <li>
-            <Link href="farmers">Хидбридни Семиња</Link>
+            <Link href="farmers">{t('HybridSeeds')}</Link>
           </li>
           <li>
-            <Link href="treva">Трева</Link>
+            <Link href="treva">{t('Grass')}</Link>
           </li>
           {/* <li>
             <Link href="portfolio-full-width">Portfolio Full Width</Link>
           </li> */}
           <li>
          
-            <Link href="semenskiKompir">Семенски компир</Link>
+            <Link href="semenskiKompir">{t('SeedPotato')}</Link>
           </li>
           <li>
-            <Link href="arpadjik">Арпаџик</Link>
+            <Link href="arpadjik">{t('Arpadzhik')}</Link>
           </li>
           <li>
-            <Link href="pcenka">Пченка</Link>
+            <Link href="pcenka">{t('Corn')}</Link>
           </li>
           <li>
-            <Link href="lucerka">Луцерка</Link>
-          </li>
-          
-        </ul>
-      </li>
-      <li className="menu-item has-children">
-        <a href="pesticidi">ПЕСТИЦИДИ</a>
-        <ul className="sub-menu">
-          <li>
-            <Link href="fungicidi">Фунгициди</Link>
-          </li>
-          <li>
-            <Link href="insekticidi">Инсектициди</Link>
-          </li>
-          <li>
-            <Link href="akaricidi">Акарициди</Link>
-          </li>
-          <li>
-            <Link href="herbicidi">Хербициди</Link>
-          </li>
-          <li>
-            <Link href="nematocidi">Нематоциди</Link>
+            <Link href="lucerka">{t('Lucerka')}</Link>
           </li>
           
         </ul>
       </li>
       <li className="menu-item has-children">
-        <a href="gjubrivo">ЃУБРИВО</a>
+        <a href="pesticidi">{t('pesticides')}</a>
         <ul className="sub-menu">
           <li>
-            <Link href="organskiGjubriva">Органски Ѓубрива</Link>
+            <Link href="fungicidi">{t('Fungicides')}</Link>
           </li>
           <li>
-            <Link href="kristalniGjubriva">КРИСТАЛНИ ЃУБРИВА</Link>
+            <Link href="insekticidi">{t('Insecticides')}</Link>
+          </li>
+          <li>
+            <Link href="akaricidi">{t('Acaricides')}</Link>
+          </li>
+          <li>
+            <Link href="herbicidi">{t('Herbicides')}</Link>
+          </li>
+          <li>
+            <Link href="nematocidi">{t('Nematodes')}</Link>
+          </li>
+          
+        </ul>
+      </li>
+      <li className="menu-item has-children">
+        <a href="gjubrivo">{t('fertilizer')}</a>
+        <ul className="sub-menu">
+          <li>
+            <Link href="organskiGjubriva">{t('OrganicFertilizers')}</Link>
+          </li>
+          <li>
+            <Link href="kristalniGjubriva">{t('CrystalFertilizers')}</Link>
           </li>
         </ul>
       </li>
       <li className="menu-item has-children">
-        <a href="repro">РЕПРО</a>
+        <a href="repro">{t('repro')}</a>
         <ul className="sub-menu">
           <li>
-            <Link href="treset">Тресет</Link>
+            <Link href="treset">{t('Peat')}</Link>
           </li>
           <li>
-            <Link href="folija">Фолија</Link>
+            <Link href="folija">{t('Foil')}</Link>
           </li>
           <li>
-            <Link href="vrekji">ПП-Вреќи</Link>
+            <Link href="vrekji">{t('PPBags')}</Link>
           </li>
           <li>
-            <Link href="filc">Филц</Link>
+            <Link href="filc">{t('Felt')}</Link>
           </li>
           <li>
-            <Link href="crnaFolija">Црна Фолија</Link>
+            <Link href="crnaFolija">{t('BlackFoil')}</Link>
           </li>
         </ul>
       </li>
       <li className="menu-item has-children">
-        <a href="programi-za-zastita">ПРОГРАМИ ЗА ЗАШТИТА</a>
+        <a href="programi-za-zastita">{t('PPG')}</a>
         <ul className="sub-menu">
           <li>
-            <Link href="vinovaLoza">Винова лоза</Link>
+            <Link href="vinovaLoza">{t('Vineyard')}</Link>
           </li>
           <li>
-            <Link href="jsbolcestoOvosje">ЈАБОЛЧЕСТО ОВОШЈЕ</Link>
+            <Link href="jabolcestoOvosje">{t('AppleFruits')}</Link>
           </li>
           <li>
-            <Link href="koskestoOvosje">КОСКЕСТО ОВОШЈЕ</Link>
+            <Link href="koskestoOvosje">{t('FruitStone')}</Link>
           </li>
           <li>
-            <Link href="jagodestoOvosje">ЈАГОДЕСТО ОВОШЈЕ</Link>
+            <Link href="jagodestoOvosje">{t('StrawberryFruits')}</Link>
           </li>
           <li>
-            <Link href="kompir">КОМПИР</Link>
+            <Link href="kompir">{t('NutsFruits')}</Link>
           </li>
           <li>
-            <Link href="gradinarskiKulturi">ГРАДИНАРСКИ КУЛТУРИ</Link>
+            <Link href="gradinarskiKulturi">{t('GardenCorps')}</Link>
           </li>
           <li>
-            <Link href="morkov">МОРКОВ</Link>
+            <Link href="morkov">{t('Carrots')}</Link>
           </li>
           <li>
-            <Link href="zitarici">ЖИТАРИЦИ</Link>
+            <Link href="zitarici">{t('Cereals')}</Link>
           </li>
           <li>
-            <Link href="pcenka">ПЧЕНКА</Link>
+            <Link href="pcenka">{t('Corn')}</Link>
+          </li>
+          <li>
+            <Link href="tutun">{t('Tobacco')}</Link>
           </li>
         </ul>
       </li>
