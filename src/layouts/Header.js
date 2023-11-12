@@ -6,7 +6,11 @@ import MobileHeader from "./MobileHeader";
 import OffcanvasPanel from "./OffcanvasPanel";
 import { useTranslation } from 'react-i18next';
 
-const Header = ({ header }) => {
+
+
+
+
+function Header({ header }) {
   useEffect(() => {
     stickyNav();
   }, []);
@@ -15,7 +19,7 @@ const Header = ({ header }) => {
 
   const { width } = useWindowSize();
   const { t } = useTranslation();
-  
+
   useEffect(() => {
     const headers = document.querySelectorAll(".header-navigation");
     headers.forEach((header) => {
@@ -25,9 +29,7 @@ const Header = ({ header }) => {
         header.classList.remove("breakpoint-on");
       }
       // toggle
-      const toggleBtn = header.getElementsByClassName("navbar-toggler")[0],
-        overlay = header.getElementsByClassName("nav-overlay")[0],
-        menu = header.getElementsByClassName("nav-menu")[0];
+      const toggleBtn = header.getElementsByClassName("navbar-toggler")[0], overlay = header.getElementsByClassName("nav-overlay")[0], menu = header.getElementsByClassName("nav-menu")[0];
       toggleBtn.addEventListener("click", () => {
         overlay.classList.add("active");
         menu.classList.add("menu-on");
@@ -42,32 +44,29 @@ const Header = ({ header }) => {
   switch (header) {
     case 1:
       return <>
-       <h1>{t('labelTest')}</h1>
         <Header1 />
       </>;
     case 2:
-      return     <>
-      <h1>{t('labelTest')}</h1>
-       <Header2 />
-     </>;;
+      return <>
+        <Header2 />
+      </>;;
     case 3:
       return (
         <Header3
           overlayPanel={overlayPanel}
-          togglePanel={() => togglePanel()}
-        />
+          togglePanel={() => togglePanel()} />
       );
     case 4:
       return (
         <Header4
           overlayPanel={overlayPanel}
-          togglePanel={() => togglePanel()}
-        />
+          togglePanel={() => togglePanel()} />
       );
     default:
       return <DefaultHeader />;
   }
-};
+  
+}
 export default Header;
 
 const Header1 = () => (
@@ -79,12 +78,6 @@ const Header1 = () => (
             <div className="top-bar-left d-flex align-items-center">
               <span className="text">
                 Welcome to Agrohemija
-              </span>
-              <span className="lang-dropdown">
-                <select className="wide">
-                  <option value={1}>English</option>
-                  <option value={2}>French</option>
-                </select>
               </span>
             </div>
           </div>

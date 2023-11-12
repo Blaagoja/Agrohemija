@@ -50,7 +50,7 @@ const Index = () => {
                       data-delay=".6s"
                     >
                       <Link href="/about">
-                        <a className="main-btn btn-yellow">Learn About Us</a>
+                        <a className="main-btn btn-yellow">{t('AboutUs')}</a>
                       </Link>
                       {/* <Link href="/portfolio-grid">
                         <a className="main-btn bordered-btn bordered-white">
@@ -91,7 +91,7 @@ const Index = () => {
                       data-delay=".6s"
                     >
                       <Link href="/about">
-                        <a className="main-btn btn-yellow">Learn About Us</a>
+                        <a className="main-btn btn-yellow">{t('AboutUs')}</a>
                       {/* </Link>
                       <Link href="/portfolio-grid">
                         <a className="main-btn bordered-btn bordered-white">
@@ -132,7 +132,7 @@ const Index = () => {
                       data-delay=".6s"
                     >
                       <Link href="/about">
-                        <a className="main-btn btn-yellow">Learn About Us</a>
+                        <a className="main-btn btn-yellow">{t('AboutUs')}</a>
                       </Link>
                       {/* <Link href="/portfolio-grid">
                         <a className="main-btn bordered-btn bordered-white">
@@ -173,7 +173,7 @@ const Index = () => {
                       data-delay=".6s"
                     >
                       <Link href="/about">
-                        <a className="main-btn btn-yellow">Learn About Us</a>
+                        <a className="main-btn btn-yellow">{t('AboutUs')}</a>
                       </Link>
                       {/* <Link href="/portfolio-grid">
                         <a className="main-btn bordered-btn bordered-white">

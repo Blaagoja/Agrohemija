@@ -3,6 +3,8 @@ import { initReactI18next } from 'react-i18next';
 import en from './en/common.js';
 import mk from './mk/common.js';
 
+
+
 i18n.use(initReactI18next).init({
   resources: {
     ['en']: {
@@ -13,11 +15,13 @@ i18n.use(initReactI18next).init({
     }, 
     fallbackLng: 'mk',
   },
-  lng: 'en',
+  lng: 'mk',
   keySeparator: '.',
   interpolation: {
     escapeValue: false, // react already safes from xss
   },
 });
+
+
 
 export { i18n, en, mk };
