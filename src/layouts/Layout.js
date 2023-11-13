@@ -6,7 +6,9 @@ import { animation } from "../utils";
 import Footer from "./Footer";
 import Header from "./Header";
 import ScrollTop from "./ScrollTop";
-const Layout = ({ children, header, footer }) => {
+
+
+const Layout = ({ children, header, footer,}) => {
   useEffect(() => {
     animation();
     niceSelect({ withoutwide: true });

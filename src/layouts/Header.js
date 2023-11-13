@@ -9,6 +9,9 @@ import '../../public/locales/en/common.js';
 import '../../public/locales/mk/common.js';
 import '../../public/locales/index.js';
 import { t } from "i18next";
+import LanguageSwitcher from "../../public/locales/LanguageSwitcher";
+
+
 
 
 
@@ -18,6 +21,7 @@ import { t } from "i18next";
 
 function Header({ header }) {
 
+  
   const { t } = useTranslation();
   useEffect(() => {
     stickyNav();
@@ -84,7 +88,8 @@ const Header1 = () => (
         <div className="row align-items-center">
           <div className="col-xl-6 col-lg-12 col-md-12 col-6">
             <div className="top-bar-left d-flex align-items-center">
-      
+           {/* Language Switcher */}
+            <LanguageSwitcher />
             </div>
           </div>
           <div className="col-xl-6 col-lg-12 col-md-12 col-6">

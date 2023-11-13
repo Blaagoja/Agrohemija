@@ -4,5 +4,11 @@
     "files": [
       "static/chunks/src_components_Counter_js.js"
     ]
+  },
+  "portfolio-grid.js -> ../src/components/PortfolioGridIsotope": {
+    "id": "portfolio-grid.js -> ../src/components/PortfolioGridIsotope",
+    "files": [
+      "static/chunks/src_components_PortfolioGridIsotope_js.js"
+    ]
   }
 }
