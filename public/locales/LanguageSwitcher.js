@@ -10,10 +10,11 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className='col-xl-6 col-lg-12 col-md-12 col-6'>
-      <button onClick={() => changeLanguage('en')}>English</button>
-      <button onClick={() => changeLanguage('mk')}>Македонски</button>
-    </div>
+    <ul>
+   
+      <li><button onClick={() => changeLanguage('en')}>English</button></li>
+      <li> <button onClick={() => changeLanguage('mk')}>Македонски</button></li>
+    </ul>
   );
 };
 
